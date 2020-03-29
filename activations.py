@@ -53,16 +53,16 @@ def leaky_relu_grad(X, alpha = 0.01):
     dX[X<=0] = alpha
     return dX
 
-def main():
-    A = -np.random.rand(5, 1)
-    print(f"Array: {A}")
-    print(f"Sigmoid: {sigmoid(A)}, Sigmoid_grad = {sigmoid_grad(A)}")
-    print(f"Tanh: {tanh(A)}, tanh_grad = {tanh_grad(A)}")
-    print(f"Relu: {relu(A)}, relu_grad = {relu_grad(A)}")
-    print(f"Leaky relu: {leaky_relu(A)}, leaky_relu_grad = {leaky_relu_grad(A)}")
+# def main():
+#     A = -np.random.rand(5, 1)
+#     print(f"Array: {A}")
+#     print(f"Sigmoid: {sigmoid(A)}, Sigmoid_grad = {sigmoid_grad(A)}")
+#     print(f"Tanh: {tanh(A)}, tanh_grad = {tanh_grad(A)}")
+#     print(f"Relu: {relu(A)}, relu_grad = {relu_grad(A)}")
+#     print(f"Leaky relu: {leaky_relu(A)}, leaky_relu_grad = {leaky_relu_grad(A)}")
     
 
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
