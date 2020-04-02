@@ -7,9 +7,10 @@ def sigmoid(X):
     return 1.0 / (1.0 + np.exp(-X))
 
 # sigmoid'(x) = sigmoid(x) * (1 - sigmoid(x))
-def sigmoid_grad(X):
+def sigmoid_backward(dA, X):
     s = sigmoid(X)
-    return s * (1.0 - s)
+    dS = s * (1.0 - s)
+    return dA * dS
 
 #tanh activation
 
@@ -20,9 +21,10 @@ def tanh(X):
     return (X_exp - X_neg_exp) / (X_exp + X_neg_exp)
 
 # tanh'(x) = 1 - tanh(x)^2
-def tanh_grad(X):
+def tanh_backward(dA, X):
     tan = tanh(X)
-    return 1.0 - (tan * tan)
+    dS = 1.0 - (tan * tan)
+    return dS * dA
 
 # Relu
 
@@ -33,10 +35,10 @@ def relu(X):
 
 # relu'(X) = 0 for X <= 0, 1 for X > 0
 
-def relu_grad(X):
+def relu_backward(dA, X):
     dX = np.zeros_like(X)
     dX[X>0] = 1
-    return dX
+    return dA * dX
 
 
 #leaky Relu
@@ -48,10 +50,10 @@ def leaky_relu(X, alpha = 0.01):
     return lrelu
 
 #leaky_relu'(X) = 1 for X > 0, else alpha
-def leaky_relu_grad(X, alpha = 0.01):
+def leaky_relu_backward(dA, X, alpha = 0.01):
     dX = np.ones_like(X)
     dX[X<=0] = alpha
-    return dX
+    return dX * dA
 
 # def main():
 #     A = -np.random.rand(5, 1)
