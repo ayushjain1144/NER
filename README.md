@@ -7,3 +7,7 @@
 # Gradient Checking 
 
 - https://imaddabbura.github.io/post/coding-nn-gradient-checking/
+
+# Precision & Recall
+
+- https://github.com/bhattbhavesh91/classification-metrics-python/blob/master/ml_a.ipynb
