@@ -66,10 +66,10 @@ Notice the very small number of samples of type 6, 2, 9 etc. are normalised afte
 
 # Coding File Details:
 
-CORNLL.ipynb: Preprocess the data and extract features
-NER_NN.ipynb: Neural Network Implementation
-NER_NN_balanced.ipynb: Neural Network Implementation with SMOTE
-Other .py files: Supporting code
+- CORNLL.ipynb: Preprocess the data and extract features
+- NER_NN.ipynb: Neural Network Implementation
+- NER_NN_balanced.ipynb: Neural Network Implementation with SMOTE
+- Other .py files: Supporting code
 
 # References:
 
